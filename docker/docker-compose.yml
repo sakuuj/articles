@@ -133,7 +133,8 @@ services:
 
   elastic_search:
     secrets:
-      - elastic_search_password
+      - source: elastic_search_password
+        mode: "0600"
     container_name: elasticsearch-articles
     image: elasticsearch:8.14.3
     environment:
